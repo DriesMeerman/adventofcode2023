@@ -3,15 +3,14 @@
 
 print("\n\n----------------------------------------")
 print("Advent of Code 2023")
-print("----------------------------------------")
+print("----------------------------------------\n")
 
 
-let day1 = Day1Part1()
+let runner = ChallengeRunner()
 
-// test successfully
-print("Day 1 calibration document")
-print(day1.test())
+// runner.setDayActive(day: 1) // set any specific day active
+// runner.activateAll() // activate all challenges
+runner.activateLatest()
 
-// load content from file day1.txt into a string
-let day1Input = try! String(contentsOfFile: "./inputs/day1.txt", encoding: .utf8)
-print("Day 1 result: \(day1.perform(input: day1Input))")
+runner.test() // run example input for each challenge to quickly validate the solution
+runner.run() // run the actual input for each active challenge
