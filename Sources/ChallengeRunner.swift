@@ -40,9 +40,9 @@ class ChallengeRunner {
     }
 
     func run() {
-        print("Running...\n")
+        print("Running with input..\n")
         for challenge in challenges {
-            //print("Day \(challenge.day)")
+            guard challenge.test(silent: true) else { continue }
             let input = try! String(contentsOfFile: challenge.inputFilePath, encoding: .utf8)
             print("\(challenge.name): \(challenge.perform(input: input))")
             print("\n----------------------------------------\n")
