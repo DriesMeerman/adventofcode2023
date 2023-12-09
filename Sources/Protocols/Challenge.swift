@@ -4,11 +4,11 @@
 protocol Challenge {
 
     var inputFilePath: String { get }
-    var day: Int { get }
+    var name: String { get }
 
     init()
 
     func perform(input: String) -> String
-    func test() -> Bool
+    func test(silent: Bool) -> Bool
     
 }

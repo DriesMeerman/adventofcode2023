@@ -3,7 +3,7 @@ import Foundation
 struct Day1Part1: Challenge {
 
     var inputFilePath = "./inputs/day1.txt"
-    var day: Int = 1
+    var name = "Day 1 Part 1"
 
     func perform(input: String) -> String {
         let lines = input.split(separator: "\n")
@@ -22,7 +22,7 @@ struct Day1Part1: Challenge {
         return "\(result)"
     }
 
-    func test() -> Bool {
+    func test(silent: Bool = true) -> Bool {
         let input = """
 1abc2
 pqr3stu8vwx
@@ -32,14 +32,24 @@ treb7uchet
 
         let answer = self.perform(input: input)
         let expected = "142" 
-        print("Expecting \(expected) == \(answer)")
+        if !silent { print("Expecting \(expected) == \(answer)") }
         return answer == expected
     }
+}
 
-   
-
-
-
-
+struct Day2Part2: Challenge {
     
+        var inputFilePath = "./inputs/day1.txt"
+        var name = "Day 1 Part 2"
+    
+        func perform(input: String) -> String {
+            return ""
+        }
+    
+        func test(silent: Bool = true) -> Bool {
+            // let input = """
+            // """
+
+            return false
+        }
 }

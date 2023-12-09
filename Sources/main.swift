@@ -12,5 +12,5 @@ let runner = ChallengeRunner()
 // runner.activateAll() // activate all challenges
 runner.activateLatest()
 
-runner.test() // run example input for each challenge to quickly validate the solution
+runner.test(silent: false) // run example input for each challenge to quickly validate the solution
 runner.run() // run the actual input for each active challenge
